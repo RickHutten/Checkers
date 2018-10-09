@@ -9,10 +9,13 @@ import java.awt.*;
 public class Main {
 
     public static void main(String[] args) {
-        // Create a new window
-        Window window = new Window();
+        // Schedule a job for the event-dispatching thread
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            // Create a new window
+            Window window = new Window();
 
-        // Display the main menu screen
-        window.add(new StartScreen(window), BorderLayout.CENTER);
+            // Display the main menu screen
+            window.add(new StartScreen(window), BorderLayout.CENTER);
+        });
     }
 }
